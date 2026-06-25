@@ -569,7 +569,7 @@ do
     },
 
     completion = {
-      documentation = { auto_show = false, auto_show_delay_ms = 500 }
+      documentation = { auto_show = true, auto_show_delay_ms = 500 }
     },
 
     sources = {
@@ -632,7 +632,7 @@ end
 ----------------------------------------
 
 do
-  -- require 'kickstart.plugins.autopairs'
+  require 'kickstart.plugins.autopairs'
   require 'kickstart.plugins.gitsigns'
   require 'plugins'
 end
