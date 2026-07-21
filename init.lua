@@ -12,6 +12,9 @@ do
   vim.o.number = true
   vim.o.relativenumber = true
 
+  -- line breaks
+  vim.o.linebreak = true
+
   -- tab stuff
   vim.o.expandtab = true -- expand tab input with spaces characters
   vim.o.autoindent = true -- automatically add indents to newlines
@@ -280,6 +283,7 @@ do
   vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
   vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files (\'.\' for repeat)' })
   vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = '[S]earch [C]ommands' })
+  vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = '[S]earch [B]uffers' })
   vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
   -- Add Telescope-based LSP pickers when an LSP attaches to a buffer.
