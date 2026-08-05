@@ -229,7 +229,7 @@ do
     n_lines = 500,
   })
 
-  require('mini.surround').setup()
+  -- require('mini.surround').setup()
 
   require('mini.files').setup({
     mappings = {
