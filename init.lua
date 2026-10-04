@@ -435,11 +435,19 @@ do
         '--clang-tidy',
       }
     },
+    fortls = { -- used for fortran
+      cmd = {
+        'fortls',
+        '--lowercase_intrinsics'
+      }
+    },
     cssls = {}, -- used for CSS
     css_variables = {}, --  ditto
     ts_ls = {}, -- typescript/javascript
+    jsonls = {}, -- json
+    ruby_lsp = {}, -- ruby
     texlab = {}, -- latex
-
+    pylsp = {}, --python
     haxe_language_server = {
       cmd = { 'haxe-language-server' },
       filetypes = { 'haxe' },
@@ -453,7 +461,6 @@ do
         displayArguments = { 'build.hxml' },
       },
     },
-
     emmet_language_server = {
       filetypes = { 'css', 'html', 'javascript', 'eruby', 'scss', 'sass', 'less', 'ejs' },
       init_options = {
@@ -462,7 +469,6 @@ do
         },
       },
     },
-
     lua_ls = { -- special lua config recommended by nvim help docs
       on_init = function(client)
         client.server_capabilities.documentFormattingProvider = false -- disable formatting (covered by stylua)
